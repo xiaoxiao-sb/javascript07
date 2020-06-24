@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+		<script type="text/javascript">
+			/*
+			 * dom操作:
+			 * 事件:
+			 * 三要素: 
+			 * 事件源:被操作的物体
+			 * 事件类型: 用户的操作行为   单击  双击   移入  移出  拖拽  滑屏
+			 * 事件处理程序: 执行的命令
+			 * 事件源.事件类型  = 事件处理程序 
+			 * 术语:
+			 * 给对象绑定一个事件
+			 * 给对象添加一个事件监听
+			 * 触发事件
+			 * 
+			 * 获取元素对象:
+			 * document.getElementById('id名称'); 通过id名称获取元素对象
+			 */
+			var btn = document.getElementById('btn');
+			console.log(btn);
+			console.dir(btn);
+			
+			//第一种
+//			btn.onclick = sum;
+//			function sum(){
+//				console.log('今天忘带伞了');
+//			}
+			//第二种
+			btn.onclick = function (){
+				alert('哈哈,没带伞');
+			}
+			console.log('后面的代码.......');
+			console.log('后面的代码.......');
+			console.log('后面的代码.......');
+			console.log('后面的代码.......');
+		</script>
+	</body>
+</html>

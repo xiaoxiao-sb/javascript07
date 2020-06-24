@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<img src="images/111.jpg" width="100" />
+		<img src="images/222.jpg" width="200" />
+		<img src="images/333.jpg" width="300" />
+		<script type="text/javascript">
+			//获取img数组
+			var imgs = document.getElementsByTagName('img');		
+			//循环绑定事件
+			for(var i = 0; i < imgs.length; i++) {
+				//在遍历每一个对象的时候,动态的添加一个num属性,将i当前的值存储到num属性中
+				imgs[i].num = i;
+				imgs[i].onclick = function() {
+					//读取事件源自身的num属性
+					alert(this.num);
+				}
+
+			}
+			console.log('后面的代码.....');
+		</script>
+	</body>
+
+</html>

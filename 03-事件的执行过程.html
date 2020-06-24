@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+		<script type="text/javascript">
+			//获取button
+			var btn = document.getElementById('btn');
+//			console.log(btn);
+			var num=0;
+			//事件代码已经在内存中,事件处理函数中的代码,不触发,不执行,可以反复的触发
+			
+			btn.onclick = function(){
+				num++;
+				alert(num);
+			}
+			console.log('后面的代码......');
+			console.log('后面的代码......');
+			console.log('后面的代码......');
+		</script>
+	</body>
+</html>

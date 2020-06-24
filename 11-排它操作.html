@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button>哈哈</button>
+		<button>哈哈</button>
+		<button>哈哈</button>
+		<button>哈哈</button>
+		<button>哈哈</button>
+		<button>哈哈</button>
+		<button>哈哈</button>
+		<button>哈哈</button>
+		<script type="text/javascript">
+			/*
+			 * 排他操作: 当触发事件后,让所有的元素设置默认效果,当前事件源做特殊效果
+			 * 
+			 */
+			//获取所有button
+			var btns = document.getElementsByTagName('button');
+			
+			//循环绑定事件
+			for (var i = 0; i < btns.length; i++) {
+				btns[i].onclick = function(){
+					//让所有的btns的内容是哈哈
+					for (var j = 0; j < btns.length; j++) {
+						btns[j].innerText = '哈哈';
+					}
+					//让点的那个btn的内容变成嘿嘿
+					this.innerText = '嘿嘿';
+				}
+			}
+			
+			
+		</script>
+	</body>
+</html>

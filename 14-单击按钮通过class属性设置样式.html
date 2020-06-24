@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 200px;
+				height: 200px;
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+		<div id="box"></div>
+		<script type="text/javascript">
+			/*
+			 * js中的class是保留关键字
+			 */
+			var btn = document.getElementById('btn');
+			var box = document.getElementById('box');
+			btn.onclick = function(){
+				//className属性 是标签中的class类名属性
+				box.className = 'box';
+			}
+		</script>
+	</body>
+</html>

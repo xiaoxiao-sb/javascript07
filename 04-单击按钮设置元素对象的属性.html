@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			img{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+		<img width="300" id="imgLiu"/>
+		<script type="text/javascript">
+			//单击按钮设置img的src
+			//获取按钮
+			var btn = document.getElementById('btn');
+			//获取img
+			var imgLiu = document.getElementById('imgLiu');
+			//单击按钮
+			btn.onclick = function(){
+				//设置img的src
+				//由于标签就是对象,所以设置对象的属性的语法是,对象.属性
+				imgLiu.src = 'images/liuyan.jpg';
+				imgLiu.title = '晓虎,你觉得我美吗?要不要aa制';
+			}
+		</script>
+	</body>
+</html>

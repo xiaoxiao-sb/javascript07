@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+		<p id="p1">郭子豪你也还行</p>
+		<p id="p2">郭子豪你也还行</p>
+		<p>郭子豪你也还行</p>
+		<p>郭子豪你也还行</p>
+		<p>郭子豪你也还行</p>
+		<p>郭子豪你也还行</p>
+		<script type="text/javascript">
+			var btn = document.getElementById('btn');
+//			var p1 = document.getElementById('p1');
+//			var p2 = document.getElementById('p2');
+			//通过标签名获取的是一个对象的数组
+			var ps=document.getElementsByTagName('p');
+			console.log(ps);
+			//单击按钮
+			btn.onclick = function(){
+//				p1.innerText = '段落';
+//				p2.innerText = '段落';
+//				ps.innerText = '段落';
+//				ps[0].innerText = '段落';
+//				ps[1].innerText = '段落';
+//				ps[2].innerText = '段落';
+//				ps[3].innerText = '段落';
+//				ps[4].innerText = '段落';
+
+				for(var i = 0;i<ps.length;i++){
+					ps[i].innerText = '段落';
+				}
+			}
+			
+		</script>
+	</body>
+</html>

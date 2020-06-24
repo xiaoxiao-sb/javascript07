@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<!--dom操作:行内式,可以理解为onclick属性等于双引号(事件处理函数的匿名函数),双引号中
+			是函数的调用.
+		-->
+		<button id="btn" onclick="sum();fn();">按钮</button>
+		<script type="text/javascript">
+//			var btn = document.getElementById('btn');
+//			btn.onclick = function() {
+//				sum();
+//				fn();
+//			};
+
+			function sum() {
+				alert('我是sum');
+			}
+			function fn(){
+				alert('我是fn');
+			}
+		</script>
+
+	</body>
+
+</html>

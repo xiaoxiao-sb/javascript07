@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<img src="images/111.jpg" width="100" />
+		<img src="images/222.jpg" width="200" />
+		<img src="images/333.jpg" width="300" />
+		<script type="text/javascript">
+			//获取img数组
+			var imgs = document.getElementsByTagName('img');
+//
+//						imgs[0].onclick = function(){
+//							alert(imgs[0].width);
+//						}
+//						imgs[1].onclick = function(){
+//							alert(imgs[1].width);
+//						}
+//						imgs[2].onclick = function(){
+//							alert(imgs[2].width);
+//						}
+//						imgs[0].onclick = function(){
+//							alert(this.width);
+//						}
+//						imgs[1].onclick = function(){
+//							alert(this.width);
+//						}
+//						imgs[2].onclick = function(){
+//							alert(this.width);
+//						}
+			
+			/*
+			 * 循环是当浏览器运行,一瞬间执行完的,分别给imgs中的每个对象都绑定了单击事件,
+			 * 然后当i==3的时候0,循环结束,继续执行后面的代码
+			 * 
+			 * 事件处理函数中的代码,是页面加载完之后的事情,必须单击才能触发,所以此时i已经是
+			 * 一个死值3了. 所以img[3]没有这个对象
+			 * 
+			 * 在事件处理函数中,this指向的是事件源
+			 */
+			//循环绑定事件
+			for(var i = 0; i < imgs.length; i++) {
+				imgs[i].onclick = function() {
+					alert(this.width);
+				}
+
+			}
+			console.log('后面的代码.....');
+		</script>
+	</body>
+
+</html>
